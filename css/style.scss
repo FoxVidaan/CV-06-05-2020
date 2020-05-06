@@ -1,0 +1,396 @@
+$font-family: Helvetica,
+sans-serif;
+$margin-section: 70px;
+$clouds: #ECF0F1;
+$asbestos: #7F8C8D;
+$midnightBlue: #2C3E50;
+$pomegranate: #C0392B;
+$asphalt: #34495E;
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: $font-family;
+    background-color: $clouds;
+}
+
+header {
+    background-color: $clouds;
+    display: flex;
+    letter-spacing: 3px;
+    box-shadow: 0,
+        0,
+        1,
+        1;
+
+    .info {
+        padding: 40px;
+        flex: 4;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        background-color: $pomegranate;
+        color: $clouds;
+
+        h1 {
+            margin-block-start: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    .media {
+        flex: 1;
+        background-color: $clouds;
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            list-style: none;
+            padding-inline-start: 0;
+
+            a {
+                transition: 0.7s;
+            }
+        }
+
+        ul:hover {
+            a {
+                opacity: 0.4;
+                filter: blur(1px);
+            }
+
+            a:hover {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        img {
+            width: 75px;
+        }
+    }
+}
+
+main {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: $margin-section;
+        padding-top: $margin-section;
+
+
+        .title {
+            width: 500px;
+            letter-spacing: 2px;
+            text-align: center;
+            font-size: 1.8em;
+            background-color: $pomegranate;
+            color: $clouds;
+            margin-bottom: $margin-section;
+            box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 1px 2px;
+
+        }
+    }
+
+    .presentation {
+        background-color: $asphalt;
+
+        .content {
+            letter-spacing: 1px;
+            line-height: 1.6;
+            background-color: $clouds;
+            width: 80%;
+            padding: 30px;
+            box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 2px 2px;
+        }
+    }
+
+    .date {
+        background-color: $asphalt;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .timeline {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: $clouds;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: $clouds;
+            border: 4px solid $pomegranate;
+            top: 15px;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid $clouds;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $clouds;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid $clouds;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $clouds transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            letter-spacing: 1px;
+            line-height: 1.6;
+            background-color: $clouds;
+            padding: 20px 30px;
+
+            .lieu {
+                color: $pomegranate;
+            }
+        }
+    }
+
+    .date:nth-child(2n) {
+        background-color: $clouds;
+
+        .timeline::after {
+            background-color: $pomegranate;
+        }
+
+        .left::before {
+            border-color: transparent transparent transparent $pomegranate;
+        }
+
+        .right::before {
+            border-color: transparent $pomegranate transparent transparent;
+        }
+
+        .content {
+            border: 5px solid $pomegranate;
+        }
+    }
+
+    .competences {
+        .cardsplace {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+
+            .cards {
+                width: 25%;
+                background-color: $clouds;
+                display: flex;
+                flex-direction: column;
+                box-shadow: $pomegranate 3px 3px 1px 1px;
+
+                .cardstitle {
+                    height: 50px;
+                    border-bottom: 2px $pomegranate solid;
+                    font-size: 1.2em;
+                }
+
+                .cardscontent {
+                    padding: 10px;
+
+                    ul {
+                        list-style: none;
+                        padding-inline-start: 0;
+                    }
+                }
+
+                .cardstitle,
+                .cardscontent ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        letter-spacing: 1px;
+
+        .info {
+            padding: px;
+            flex: 4;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+            ul {
+                padding-inline-start: 0;
+            }
+        }
+
+        .media {
+            flex: 1;
+            background-color: $clouds;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            ul {
+                flex-direction: row;
+            }
+
+            img {
+                width: 75px;
+            }
+        }
+    }
+
+    /* Place the timelime to the left */
+    main {
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: $margin-section;
+            padding-top: $margin-section;
+
+
+            .title {
+                padding: 10px;
+                width: max-content;
+                letter-spacing: 1px;
+                text-align: center;
+                font-size: 1.1em;
+                margin-bottom: $margin-section;
+            }
+        }
+
+        .presentation {
+            background-color: $asphalt;
+
+            .content {
+                letter-spacing: 1px;
+                line-height: 1.4;
+                padding: 15px;
+            }
+        }
+
+        .date:nth-child(2n) {
+            .left::before {
+                border-color: transparent #C0392B transparent;
+            }
+        }
+
+        .date {
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .container::before {
+                left: 60px;
+                border: medium solid $clouds;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent $clouds transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+
+            .content {
+                letter-spacing: 0;
+                font-size: 1em;
+                line-height: 1.2;
+                padding: 10px 15px;
+            }
+        }
+        .competences {
+            .cardsplace {
+                flex-direction: column;
+    
+                .cards {
+                    width: 100%;
+                    margin-bottom: $margin-section;
+                }
+                .cards:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  padding: 0px;
+  font-family: Helvetica, sans-serif;
+  background-color: #ECF0F1; }
+
+header {
+  background-color: #ECF0F1;
+  display: flex;
+  letter-spacing: 3px;
+  box-shadow: 0, 0, 1, 1; }
+  header .info {
+    padding: 40px;
+    flex: 4;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    background-color: #C0392B;
+    color: #ECF0F1; }
+    header .info h1 {
+      margin-block-start: 0; }
+    header .info ul {
+      list-style: none; }
+  header .media {
+    flex: 1;
+    background-color: #ECF0F1;
+    display: flex;
+    justify-content: center; }
+    header .media ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      list-style: none;
+      padding-inline-start: 0; }
+      header .media ul a {
+        transition: 0.7s; }
+    header .media ul:hover a {
+      opacity: 0.4;
+      filter: blur(1px); }
+    header .media ul:hover a:hover {
+      opacity: 1;
+      filter: blur(0); }
+    header .media img {
+      width: 75px; }
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
+  padding-top: 70px; }
+  main section .title {
+    width: 500px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.8em;
+    background-color: #C0392B;
+    color: #ECF0F1;
+    margin-bottom: 70px;
+    box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 1px 2px; }
+main .presentation {
+  background-color: #34495E; }
+  main .presentation .content {
+    letter-spacing: 1px;
+    line-height: 1.6;
+    background-color: #ECF0F1;
+    width: 80%;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 2px 2px; }
+main .date {
+  background-color: #34495E;}
+  main .date * {
+    box-sizing: border-box; }
+  main .date .timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto; }
+  main .date .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ECF0F1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; }
+  main .date .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%; }
+  main .date .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #ECF0F1;
+    border: 4px solid #C0392B;
+    top: 15px;
+    z-index: 1; }
+  main .date .left {
+    left: 0; }
+  main .date .right {
+    left: 50%; }
+  main .date .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #ECF0F1;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ECF0F1; }
+  main .date .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #ECF0F1;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ECF0F1 transparent transparent; }
+  main .date .right::after {
+    left: -16px; }
+  main .date .content {
+    letter-spacing: 1px;
+    line-height: 1.6;
+    background-color: #ECF0F1;
+    padding: 20px 30px; }
+    main .date .content .lieu {
+      color: #C0392B; }
+main .date:nth-child(2n) {
+  background-color: #ECF0F1; }
+  main .date:nth-child(2n) .timeline::after {
+    background-color: #C0392B; }
+  main .date:nth-child(2n) .left::before {
+    border-color: transparent transparent transparent #C0392B; }
+  main .date:nth-child(2n) .right::before {
+    border-color: transparent #C0392B transparent transparent; }
+  main .date:nth-child(2n) .content {
+    border: 5px solid #C0392B; }
+main .competences .cardsplace {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; }
+  main .competences .cardsplace .cards {
+    width: 25%;
+    background-color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #C0392B 3px 3px 1px 1px; }
+    main .competences .cardsplace .cards .cardstitle {
+      height: 50px;
+      border-bottom: 2px #C0392B solid;
+      font-size: 1.2em; }
+    main .competences .cardsplace .cards .cardscontent {
+      padding: 10px; }
+      main .competences .cardsplace .cards .cardscontent ul {
+        list-style: none;
+        padding-inline-start: 0; }
+    main .competences .cardsplace .cards .cardstitle,
+    main .competences .cardsplace .cards .cardscontent ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    letter-spacing: 1px; }
+    header .info {
+      padding: px;
+      flex: 4;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+      header .info ul {
+        padding-inline-start: 0; }
+    header .media {
+      flex: 1;
+      background-color: #ECF0F1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      header .media ul {
+        flex-direction: row; }
+      header .media img {
+        width: 75px; }
+
+  /* Place the timelime to the left */
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+    padding-top: 70px; }
+    main section .title {
+      padding: 10px;
+      width: max-content;
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 70px; }
+  main .presentation {
+    background-color: #34495E; }
+    main .presentation .content {
+      letter-spacing: 1px;
+      line-height: 1.4;
+      padding: 15px; }
+  main .date:nth-child(2n) .left::before {
+    border-color: transparent #C0392B transparent; }
+  main .date {
+    /* Full-width containers */
+    /* Make sure that all arrows are pointing leftwards */
+    /* Make sure all circles are at the same spot */
+    /* Make all right containers behave like the left ones */ }
+    main .date .timeline::after {
+      left: 31px; }
+    main .date .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px; }
+    main .date .container::before {
+      left: 60px;
+      border: medium solid #ECF0F1;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #ECF0F1 transparent transparent; }
+    main .date .left::after,
+    main .date .right::after {
+      left: 15px; }
+    main .date .right {
+      left: 0%; }
+    main .date .content {
+      letter-spacing: 0;
+      font-size: 1em;
+      line-height: 1.2;
+      padding: 10px 15px; }
+  main .competences .cardsplace {
+    flex-direction: column; }
+    main .competences .cardsplace .cards {
+      width: 100%;
+      margin-bottom: 70px; }
+    main .competences .cardsplace .cards:last-child {
+      margin-bottom: 0; } }
+
+/*# sourceMappingURL=style.css.map */
