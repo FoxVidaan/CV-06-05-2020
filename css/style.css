@@ -151,7 +151,8 @@ main .competences .cardsplace {
     background-color: #ECF0F1;
     display: flex;
     flex-direction: column;
-    box-shadow: #C0392B 3px 3px 1px 1px; }
+    border-right: 2px red solid;
+    border-bottom: 2px red solid; }
     main .competences .cardsplace .cards .cardstitle {
       height: 50px;
       border-bottom: 2px #C0392B solid;
