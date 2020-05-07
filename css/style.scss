@@ -243,8 +243,9 @@ main {
                 background-color: $clouds;
                 display: flex;
                 flex-direction: column;
-                border-bottom: 3px solid $pomegranate;
                 border-right: 3px solid $pomegranate;
+                border-bottom: 3px solid $pomegranate;
+
 
                 .cardstitle {
                     height: 50px;

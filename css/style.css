@@ -160,13 +160,8 @@ main .competences .cardsplace {
     background-color: #ECF0F1;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    border-bottom: 3px solid #C0392B;
-    border-right: 3px solid #C0392B; }
-=======
-    border-right: 2px red solid;
-    border-bottom: 2px red solid; }
->>>>>>> e8154b0e62c8bc2d6eca34d89f2b21482cd0d0cb
+    border-right: 3px solid #C0392B;
+    border-bottom: 3px solid #C0392B; }
     main .competences .cardsplace .cards .cardstitle {
       height: 50px;
       border-bottom: 2px #C0392B solid;
