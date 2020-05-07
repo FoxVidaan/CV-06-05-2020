@@ -150,8 +150,8 @@ main {
             width: 25px;
             height: 25px;
             right: -17px;
-            background-color: $clouds;
-            border: 4px solid $pomegranate;
+            background-color: $pomegranate;
+            border: 4px solid $clouds;
             top: 15px;
             z-index: 1;
         }
@@ -217,6 +217,11 @@ main {
 
         .timeline::after {
             background-color: $pomegranate;
+        }
+
+        .container::after {
+            background-color: $clouds;
+            border: 4px solid $pomegranate;
         }
 
         .left::before {
