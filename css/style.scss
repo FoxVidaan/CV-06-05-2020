@@ -3,9 +3,9 @@ sans-serif;
 $margin-section: 70px;
 $clouds: #ECF0F1;
 $asbestos: #7F8C8D;
-$midnightBlue: #2C3E50;
+$midnightBlue: rgb(49, 58, 88);
 $pomegranate: #C0392B;
-$asphalt: #34495E;
+$asphalt: rgb(62, 95, 131);
 
 body {
     margin: 0;
@@ -243,7 +243,8 @@ main {
                 background-color: $clouds;
                 display: flex;
                 flex-direction: column;
-                box-shadow: $pomegranate 3px 3px 1px 1px;
+                border-bottom: 3px solid $pomegranate;
+                border-right: 3px solid $pomegranate;
 
                 .cardstitle {
                     height: 50px;

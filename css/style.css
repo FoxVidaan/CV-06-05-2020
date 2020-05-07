@@ -57,7 +57,7 @@ main section {
     margin-bottom: 70px;
     box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 1px 2px; }
 main .presentation {
-  background-color: #34495E; }
+  background-color: #3e5f83; }
   main .presentation .content {
     letter-spacing: 1px;
     line-height: 1.6;
@@ -66,7 +66,16 @@ main .presentation {
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.164) 3px 3px 2px 2px; }
 main .date {
-  background-color: #34495E;}
+  background-color: #3e5f83;
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */
+  /* The actual content */ }
   main .date * {
     box-sizing: border-box; }
   main .date .timeline {
@@ -151,7 +160,8 @@ main .competences .cardsplace {
     background-color: #ECF0F1;
     display: flex;
     flex-direction: column;
-    box-shadow: #C0392B 3px 3px 1px 1px; }
+    border-bottom: 3px solid #C0392B;
+    border-right: 3px solid #C0392B; }
     main .competences .cardsplace .cards .cardstitle {
       height: 50px;
       border-bottom: 2px #C0392B solid;
@@ -204,7 +214,7 @@ main .competences .cardsplace {
       font-size: 1.1em;
       margin-bottom: 70px; }
   main .presentation {
-    background-color: #34495E; }
+    background-color: #3e5f83; }
     main .presentation .content {
       letter-spacing: 1px;
       line-height: 1.4;
