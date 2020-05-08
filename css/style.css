@@ -19,27 +19,19 @@ header {
       margin-block-start: 0; }
     header .info ul {
       list-style: none; }
-  header .media {
+      header .info ul a {
+        text-decoration: none;
+        color: #ECF0F1; }
+      header .info ul a:hover {
+        font-weight: 600;
+        text-decoration: underline; }
+  header .logo {
     flex: 1;
-    background-color: #ECF0F1;
     display: flex;
+    align-items: center;
     justify-content: center; }
-    header .media ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      list-style: none;
-      padding-inline-start: 0; }
-      header .media ul a {
-        transition: 0.7s; }
-    header .media ul:hover a {
-      opacity: 0.4;
-      filter: blur(1px); }
-    header .media ul:hover a:hover {
-      opacity: 1;
-      filter: blur(0); }
-    header .media img {
-      width: 75px; }
+    header .logo img {
+      height: 200px; }
 
 main section {
   display: flex;
@@ -181,6 +173,27 @@ main .competences .cardsplace {
       align-items: center;
       justify-content: center; }
 
+footer .media {
+  background-color: #3e5f83;
+  display: flex;
+  justify-content: center; }
+  footer .media ul {
+    display: inline-flex;
+    padding-inline-start: 0em;
+    list-style: none; }
+    footer .media ul a {
+      transition: 0.7s; }
+    footer .media ul li {
+      margin: 10px; }
+    footer .media ul img {
+      width: 75px; }
+  footer .media ul:hover a {
+    opacity: 0.4;
+    filter: blur(1px); }
+  footer .media ul:hover a:hover {
+    opacity: 1;
+    filter: blur(0); }
+
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -191,16 +204,9 @@ main .competences .cardsplace {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
       header .info ul {
         padding-inline-start: 0; }
-    header .media {
-      flex: 1;
-      background-color: #ECF0F1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      header .media ul {
-        flex-direction: row; }
-      header .media img {
-        width: 75px; }
+    header .logo img {
+      margin: 10px;
+      height: 150px; }
 
   /* Place the timelime to the left */
   main section {
@@ -256,6 +262,9 @@ main .competences .cardsplace {
       width: 100%;
       margin-bottom: 70px; }
     main .competences .cardsplace .cards:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  footer .media img {
+    width: 75px; } }
 
 /*# sourceMappingURL=style.css.map */

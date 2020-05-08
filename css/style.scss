@@ -36,41 +36,25 @@ header {
 
         ul {
             list-style: none;
+            a {
+                text-decoration: none;
+                color: $clouds;
+            }
+            a:hover {
+                font-weight: 600;
+                text-decoration: underline;
+            }
         }
     }
 
-    .media {
+    .logo {
         flex: 1;
-        background-color: $clouds;
         display: flex;
+        align-items: center;
         justify-content: center;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            list-style: none;
-            padding-inline-start: 0;
-
-            a {
-                transition: 0.7s;
-            }
-        }
-
-        ul:hover {
-            a {
-                opacity: 0.4;
-                filter: blur(1px);
-            }
-
-            a:hover {
-                opacity: 1;
-                filter: blur(0);
-            }
-        }
-
         img {
-            width: 75px;
+            height: 200px;
         }
     }
 }
@@ -82,7 +66,6 @@ main {
         align-items: center;
         padding-bottom: $margin-section;
         padding-top: $margin-section;
-
 
         .title {
             width: 500px;
@@ -279,6 +262,40 @@ main {
     }
 }
 
+footer {
+    .media {
+        background-color: $asphalt;
+        display: flex;
+        justify-content: center;
+        ul {
+            display: inline-flex;
+            padding-inline-start: 0em;
+            list-style: none;
+            a {
+                transition: 0.7s;
+            }
+            li {
+            margin:10px;
+            }
+            img {
+                width: 75px;
+            }
+        }
+
+        ul:hover {
+            a {
+                opacity: 0.4;
+                filter: blur(1px);
+            }
+
+            a:hover {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }        
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     header {
@@ -294,22 +311,14 @@ main {
                 padding-inline-start: 0;
             }
         }
-
-        .media {
-            flex: 1;
-            background-color: $clouds;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            ul {
-                flex-direction: row;
-            }
-
+        .logo {
             img {
-                width: 75px;
+                margin: 10px;
+                height: 150px;
             }
         }
+
+
     }
 
     /* Place the timelime to the left */
@@ -386,17 +395,27 @@ main {
                 padding: 10px 15px;
             }
         }
+
         .competences {
             .cardsplace {
                 flex-direction: column;
-    
+
                 .cards {
                     width: 100%;
                     margin-bottom: $margin-section;
                 }
+
                 .cards:last-child {
                     margin-bottom: 0;
                 }
+            }
+        }
+    }
+
+    footer {
+        .media {
+            img {
+                width: 75px;
             }
         }
     }
